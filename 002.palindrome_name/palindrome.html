@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Palindrome</title>
+	<style type="text/css">
+		.submain{
+			margin-top: 200px;
+			width :400px; 
+			height: 130px;
+		}
+	</style>
+</head>
+<body>
+	<div align="center" >
+		<form >
+			<fieldset class="submain">
+				<legend align="center"><b>PALINDROME</b></legend>
+				<br/>
+				<label>Enter a Name</label>
+				<br/>
+				<input type="text" name="nm" id = "usrnm">
+
+				<input type="button" name="chk" value="chek" onclick="check()">
+				<h3 id="op" style="color: red;"></h3>
+			</fieldset>
+		</form>
+	</div>
+	<script type="text/javascript">
+		function check() {
+			let op = document.getElementById('op');
+			let nm = document.getElementById('usrnm').value;
+			let rev = nm.split('').reverse().join('');
+			if (rev == nm) {
+				op.innerHTML = "PALINDROME";
+			}
+			else{
+				op.innerHTML = "NOT A PALINDROME";
+			}
+		}
+	</script>
+</body>
+</html>
