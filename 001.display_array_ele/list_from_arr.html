@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>list Form an Array</title>
+</head>
+<body>
+
+<!-- first and second -->
+	<!-- <ul>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+
+	</ul> -->
+
+<!-- third way -->
+	<ul id="subjectList">
+        <!-- No <li> elements here -->
+    </ul>
+
+	<!-- <script type="text/javascript">
+		let a = ['sql','java','webtech','manual','javascript','webservice'];
+		let b = getElementsByClassName('a1');
+		for(let i = 0 ; i < a.length ; i++)
+		{
+			b[i].innerHTML = a[i];
+		}
+	</script> -->
+
+	<!-- <script type="text/javascript">
+		let subj = ['sql','java','webtech','manual','javascript','webservice'];
+		let li = document.getElementsByTagName('li');
+		subj.forEach((sub,indx)=>li[indx].innerHTML = subj);
+	</script> -->
+
+    <script type="text/javascript">
+        let subj = ['sql','java','webtech','manual','javascript','webservice'];
+        let ul = document.getElementById('subjectList');
+
+        subj.forEach(subject => {
+            let li = document.createElement('li');
+            li.textContent = subject;
+            ul.appendChild(li);
+        });
+    </script>
+</body>
+</html>
