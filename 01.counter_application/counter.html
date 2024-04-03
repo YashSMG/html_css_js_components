@@ -22,7 +22,7 @@
 				<h1 id="count">0</h1>
 				<div class="control">
 					<input type="button" name="plu" value="+" onclick="incre()">
-					<input type="button" name="reset" value="Reset" onclick="reset(); return false;">
+					<input type="button" name="reset" value="Reset" onclick="resetCount();">
 					<input type="button" name="min" value="-" onclick="decre()">
 				</div>
 			</fieldset>
@@ -36,7 +36,7 @@
 			count = count + 1;
 			countDis.textContent = count;
 		}
-		function reset() {
+		function resetCount() {
 			count = 0;
 			countDis.textContent = count;
 		}
